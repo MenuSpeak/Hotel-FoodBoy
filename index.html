@@ -3,9 +3,115 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hotel FOODBOY</title>
+  <title>Hotel FoodBoy</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+
+
+
+
+
+
+
+
+
+
+/* Tabs Navigation - Category Buttons */
+.tabs-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.tabs-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0;
+  justify-content: center;
+}
+
+.tab {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  font-size: 14px;
+  color: var(--muted);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  margin: 2px;
+}
+
+.tab.active {
+  background: linear-gradient(90deg, var(--gold1), var(--gold2));
+  color: #0b0b0d;
+  border: none;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.12);
+}
+
+/* Hover effect for better UX */
+.tab:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .tabs-scroll {
+    justify-content: flex-start;
+  }
+  
+  .tab {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .tab {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+  .tab {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  
+  .tabs-scroll {
+    justify-content: center;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .tab {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .tabs-scroll {
+    gap: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+    
     :root {
       --bg: #0b0b0d;
       --surface: #0f1114;
@@ -158,7 +264,7 @@
       font-weight: 500;
       padding: 8px 16px;
       border-radius: 30px;
-      transition: all 0.3s ease;
+      transition: all 0.3s ease;  
     }
 
     .veg {
@@ -979,12 +1085,12 @@
   <div class="container">
     <!-- Cafe Header - Original Style -->
     <div class="cafe-header">
-            <img src="logo.png" alt="Logo" style="width:300px; height:auto;">
+      <img src="logo1.png" alt="Logo" style="width:300px; height:auto;">
       <div class="cafe-name">FOODBOY</div>
-      <div class="cafe-subtitle">Hotel</div>
+      <div class="cafe-subtitle">HOTEL</div>
       <div class="location-info">
-        <div class="location-text"> </div>
-        <div class="address"> </div>
+        <div class="location-text">   </div>
+        <div class="address"></div>
         <div class="mobile-numbers">Mo no. +918928530946</div>
       </div>
       <div class="veg-nonveg">
@@ -1012,7 +1118,7 @@
           </div>
 
           <div class="tabs-scroll">
-           <button class="tab active" data-cat="all">All</button>
+            <button class="tab active" data-cat="all">All</button>
 <button class="tab" data-cat="VEG_SOUP">VEG_SOUP</button>
 <button class="tab" data-cat="NONVEG_SOUP">NONVEG_SOUP</button>
 <button class="tab" data-cat="VEG_STARTER">VEG_STARTER</button>
@@ -1029,8 +1135,14 @@
 <button class="tab" data-cat="Non Veg Indian Rice">Non Veg Indian Rice</button>
 <button class="tab" data-cat="Kepsa">Kepsa</button>  
 <button class="tab" data-cat="Breads">Breads</button> 
-<button class="tab" data-cat="Extras">Extras</button>
-          </div>
+<button class="tab" data-cat="Extras">Extras</button> 
+<!-- <button class="tab" data-cat="Kepsa">Kepsa</button>   -->
+
+
+
+
+
+        </div>
         </div>
       </div>
 
@@ -1049,7 +1161,7 @@
         <h3>Find Us on Google Maps</h3>
       </div>
       <div class="map-link-container">
-        <a href="https://goo.gl/maps/cfPmDwujJjrxEw54A?g_st=aw" target="_blank" class="map-link">
+        <a href="https://maps.app.goo.gl/fhCTGYZif7BRuELF8" target="_blank" class="map-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
             <circle cx="12" cy="10" r="3"></circle>
@@ -1115,7 +1227,7 @@
         
         <!-- Home Delivery Form -->
         <div class="delivery-form" id="homeDeliveryForm">
-          <div class="form-group">
+          <div class="form-group">  
             <label class="form-label" for="customerName">Full Name</label>
             <input type="text" id="customerName" class="form-input" placeholder="Enter your full name" />
           </div>
@@ -1159,9 +1271,9 @@
 
   <script>
     // Menu Data
-    const data = [
+    const data =[
 
- {"id":1,"cat":"VEG_SOUP","name":"लेमन कोथिंबीर सूप (Lemon Coriander Soup)","price":120,"desc":"Veg lemon coriander flavored soup.","tags":["Veg"],"img":"img/lemon-coriander-soup.jpeg"},
+  {"id":1,"cat":"VEG_SOUP","name":"लेमन कोथिंबीर सूप (Lemon Coriander Soup)","price":120,"desc":"Veg lemon coriander flavored soup.","tags":["Veg"],"img":"img/lemon-coriander-soup.jpeg"},
 {"id":2,"cat":"VEG_SOUP","name":"मंचाव सूप (Manchow Soup)","price":120,"desc":"Spicy veg manchow soup.","tags":["Veg"],"img":"img/manchow-soup.jpeg"},
 {"id":3,"cat":"VEG_SOUP","name":"पालक सूप (Palak Soup)","price":120,"desc":"Creamy spinach soup.","tags":["Veg"],"img":"img/palak-soup.jpeg"},
 {"id":4,"cat":"VEG_SOUP","name":"हॉट अँड सॉर सूप (Hot & Sour Soup)","price":120,"desc":"Hot & sour vegetable soup.","tags":["Veg"],"img":"img/hot-sour-soup.jpeg"},
@@ -1403,8 +1515,9 @@
 {"id":224,"cat":"Extras","name":"व्हेज रायता बूंदी / Veg Raita Boondi","price":"₹80","desc":"Refreshing curd raita with boondi.","tags":["Veg"],"img":"img/veg-raita-boondi.jpeg"},
 {"id":225,"cat":"Extras","name":"पापड / Papad","price":"₹25","desc":"Crispy roasted/fried papad.","tags":["Veg"],"img":"img/papad.jpeg"},
 {"id":226,"cat":"Extras","name":"ग्रीन सलाड / Green Salad","price":"₹60","desc":"Fresh green salad.","tags":["Veg"],"img":"img/green-salad.jpeg"},
-];
 
+ ];
+      
     // Cart functionality
     let cart = [];
     let deliveryType = 'restaurant'; // Default to restaurant
@@ -1672,7 +1785,7 @@
       
       // Encode the message for WhatsApp URL
       const encodedMessage = encodeURIComponent(message);
-      const whatsappURL = `https://wa.me/918433957459?text=${encodedMessage}`;
+      const whatsappURL = `https://wa.me/918291891816?text=${encodedMessage}`;
       
       // Open WhatsApp in a new tab
       window.open(whatsappURL, '_blank');
@@ -1772,9 +1885,6 @@
 </body>
 
 </html>
-
-
-
 
 
 
